@@ -1,3 +1,11 @@
+# About PCA
+
+# PCA provides a roadmap for how to reduce a complex data set to a lower dimension to reveal the
+# sometimes hidden, simplified structures that often underlie it.
+
+
+
+
 # Steps to calculate pca 
 
 # 1- Mean centre the data.
@@ -60,7 +68,7 @@ class PCA:
     def transform(self , x_test):
         '''
         In fit we will use the learnt statistics about our data 
-        basically we transform the test data to n_components
+        basically we transform the test data by projecting to learnt eigenvectors 
         
         '''
 
@@ -74,32 +82,32 @@ class PCA:
   
 
 
-if __name__ == "__main__":
-    pca = PCA(1)
-    X = np.array([
-  [2, 3, 4],
-  [4, 5, 6],
-  [6, 7, 8],
-  [10, 2, 3]
-])
+# if __name__ == "__main__":
+#     pca = PCA(1)
+#     X = np.array([
+#   [2, 3, 4],
+#   [4, 5, 6],
+#   [6, 7, 8],
+#   [10, 2, 3]
+# ])
     
-    y  = np.array([  [6, 7, 8],
-            [10, 2, 3]])    
+#     y  = np.array([  [6, 7, 8],
+#             [10, 2, 3]])    
 
-    jj = pca.fit_transform(X)
-    ot = pca.transform(y)
-    print(ot)
+#     jj = pca.fit_transform(X)
+#     ot = pca.transform(y)
+#     print(ot)
 
 
-    print("---------now sklearns---------")
+#     print("---------now sklearns---------")
 
-    from sklearn.decomposition import PCA
+#     from sklearn.decomposition import PCA
 
-    OBJ = PCA(1)
+#     OBJ = PCA(1)
 
-    jj = OBJ.fit_transform(X)
-    ot = OBJ.transform(y)
-    print(ot)
+#     jj = OBJ.fit_transform(X)
+#     ot = OBJ.transform(y)
+#     print(ot)
 
 
 
