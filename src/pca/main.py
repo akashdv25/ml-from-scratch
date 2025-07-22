@@ -4,7 +4,7 @@
 # sometimes hidden, simplified structures that often underlie it.
 
 
-
+#sklearns implementation used svd to find singluar values and that in turn finds eigen stuff
 
 # Steps to calculate pca 
 
